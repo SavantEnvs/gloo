@@ -1,0 +1,9 @@
+project: savantenvs/gloo
+target: fuzz_tcp_pair
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_tcp_pair/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_tcp_pair
+    libfuzzer: true
+    timeout: 10
